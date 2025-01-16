@@ -51,7 +51,24 @@ class StudentController extends Controller
     }
 
     // update user 
-    public function updateUser(string $id){
+    public function updatePage(string $id){
         // $users = DB::table('students')->where('id', $id)->update();
+        $users = DB::table('students')->find($id);
+        return view('updateUser', ['data' => $users]);
+    }
+
+    public function UpdateUser(Request $request, $id){
+        $users = DB::table('students')->where('id', $id)->update([
+            'name' => $request->username,
+            'email' => $request->email,
+            'address' => $request->address
+        ]);
+
+        if($users){
+            return redirect()->route('home');
+        }else{
+            echo "<h1>Failed! Please try again.</h1>";
+        }
+
     }
 }

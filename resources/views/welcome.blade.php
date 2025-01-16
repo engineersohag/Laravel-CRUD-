@@ -32,7 +32,7 @@
                     <td>
                         <a href="{{route('view.name', $user->id)}}" class="btn text-primary"><i class="fa-solid fa-eye"></i></a>
                         <a href="{{route('delete.user', $user->id)}}" class="btn text-danger"><i class="fa-solid fa-trash"></i></a>
-                        <a href="{{ route('update.user', $user->id) }}" class="btn text-warning"><i class="fa-solid fa-pen-to-square"></i></a>
+                        <a href="{{ route('update.page', $user->id) }}" class="btn text-warning"><i class="fa-solid fa-pen-to-square"></i></a>
                     </td>
                 </tr>
             </tbody>

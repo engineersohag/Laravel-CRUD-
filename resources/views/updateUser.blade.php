@@ -16,19 +16,20 @@
         <div class="row">
             <div class="col-4">
                 <h1 class="mb-3">Update Student Data</h1>
-                <form action="" method="POST">
+                <form action="{{ route('update.user', $data->id) }}" method="POST">
                     @csrf
+                    @method('PUT')
                     <div class="mb-3">
                         <label for="name" class="form-label">Name</label>
-                        <input type="text" id="name" class="form-control" name="username">
+                        <input type="text" value="{{ $data->name }}" id="name" class="form-control" name="username">
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" id="email" class="form-control" name="email">
+                        <input type="email" value="{{ $data->email }}" id="email" class="form-control" name="email">
                     </div>
                     <div class="mb-3">
                         <label for="address" class="form-label">Address</label>
-                        <input type="text" id="address" class="form-control" name="address">
+                        <input type="text" value="{{ $data->address }}" id="address" class="form-control" name="address">
                     </div>
                     <input type="submit" value="Update" class="btn btn-primary">
                 </form>

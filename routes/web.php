@@ -10,7 +10,9 @@ Route::controller(StudentController::class)->group(function(){
     Route::get('/delete/{id}', 'deleteUser')->name('delete.user');
     Route::post('/add', 'addUser')->name('addUser');
     // Update Data
-    Route::get('/update/{id}', 'updateUser')->name('update.user');
+    Route::get('/update/{id}', 'updatePage')->name('update.page');
+    Route::put('/updateUser/{id}', 'UpdateUser')->name('update.user');
+
 
 });
 
