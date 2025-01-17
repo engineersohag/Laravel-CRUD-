@@ -26,7 +26,7 @@ class StudentController extends Controller
     
     // select all users
     public function showStudent(){
-        $users = DB::table('students')->get();
+        $users = DB::table('students')->orderBy('id')->paginate(10);
         return view('welcome', ['data' => $users]);
     }
 

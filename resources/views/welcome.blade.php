@@ -39,6 +39,9 @@
             @endforeach
             
         </table>
+        <div class="mt-5">
+            {{ $data->links('pagination::bootstrap-5') }}
+        </div>
     </div>
     
 
